@@ -1,0 +1,80 @@
+<div>
+    <header>
+        <mat-toolbar color="warm">
+            <mat-toolbar-row>
+              <span>Water Consumption Tracker</span>
+              <span class="example-spacer"></span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </header>
+
+    <section>
+    </section>
+
+    <section>
+        <div>
+            <mat-card class="form-card">
+                <div class="form-inputs">
+                    <form #feedbackForm="ngForm" (ngSubmit)='onSubmit(feedbackForm)'>  
+                        <mat-form-field class="form-comp">
+                            <mat-label>Customer's Name</mat-label>
+                            <input matInput name="studentname" #studentname="ngModel" [(ngModel)]=feedbackService.selectFeedback.studentname placeholder="Enter Customer's Name" required>
+                        </mat-form-field>  
+                        
+                        <mat-form-field class="form-comp">
+                            <mat-label>Amount of liters consumed</mat-label>
+                            <input matInput name="teachername" #teachername="ngModel" [(ngModel)]=feedbackService.selectFeedback.teachername placeholder="Enter Amount of liters consumed" required>
+                        </mat-form-field>   
+
+                        <mat-form-field class="form-comp">
+                            <mat-label>Date of consumption</mat-label>
+                            <input matInput name="subknowledge" #subknowledge="ngModel" [(ngModel)]=feedbackService.selectFeedback.subknowledge type="date" required>
+                        </mat-form-field>   
+                            
+                            
+                            <div class="btn-container">
+                                <div class="btn-cls">
+                                    <button mat-raised-button type="submit" color="warn" >Submit</button>
+                                </div>
+                                <div class="btn-cls">
+                                    <button mat-raised-button type="button" color="warn" (click)="resetForm(feedbackForm)">Reset</button>
+                                </div>
+                              
+                                
+                            </div>
+                            
+                       
+                    </form>
+                </div>
+            </mat-card>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <section>
+        <h1>Reviews Section</h1>
+        <div class="review-section">
+            <mat-card class="review-card">
+                <mat-card-header>
+                  <mat-card-subtitle>Student name: Amit</mat-card-subtitle>
+                  <mat-card-subtitle>liters: 12</mat-card-subtitle>
+                  <mat-card-subtitle>date: 12/01/2020</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <mat-card>
+                <h5>Created by Amit Kumar Verma</h5>
+                <p>
+                    Copyright &copy; 2020
+                </p>
+            </mat-card>
+        </div>
+        
+    </footer>
+
+</div>
